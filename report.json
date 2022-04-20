@@ -1,5 +1,5 @@
 {
-  "time": "Tue Apr 19 2022 10:37:16 GMT+0000 (Coordinated Universal Time)",
+  "time": "Wed Apr 20 2022 10:37:45 GMT+0000 (Coordinated Universal Time)",
   "repos": [
     {
       "repo": "3d",
@@ -441,6 +441,51 @@
     },
     {
       "repo": "blueprinter",
+      "owner": "morten-olsen",
+      "rules": {
+        "require-policy": {
+          "type": "recommended",
+          "preEnforcement": {
+            "invalidReasons": [
+              ".github/policy.yml does not exist"
+            ]
+          },
+          "postEnforcement": {
+            "invalidReasons": [
+              ".github/policy.yml does not exist"
+            ]
+          }
+        },
+        "policy-owner": {
+          "type": "recommended",
+          "preEnforcement": {
+            "invalidReasons": [
+              "User @morten-olsen is not owner of .github/policy.yml"
+            ]
+          },
+          "postEnforcement": {
+            "invalidReasons": [
+              "User @morten-olsen is not owner of .github/policy.yml"
+            ]
+          }
+        },
+        "review-required": {
+          "type": "required",
+          "preEnforcement": {
+            "invalidReasons": [
+              "No branch protection for default branch main"
+            ]
+          },
+          "postEnforcement": {
+            "invalidReasons": [
+              "No branch protection for default branch main"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "repo": "bob-the-algorithm",
       "owner": "morten-olsen",
       "rules": {
         "require-policy": {
